@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>京阪神 5 日自由行｜12/2–12/6</title>
+<style>
+:root{--bg:#eef1f4;--card:#fff;--ink:#1c2433;--mute:#5d6878;--line:#d5dbe3;--kyoto:#3a5a40;--osaka:#2d4a8a;--kobe:#8a3a4a;--warn:#b3261e;--warnbg:#fbeceb;--on:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#10151e;--card:#1a212d;--ink:#e8ecf2;--mute:#9aa6b8;--line:#2b3546;--kyoto:#7fb08a;--osaka:#8fb0f0;--kobe:#e39aa9;--warn:#ff8a80;--warnbg:#3a1f1e;--on:#10151e}}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+header{padding:2rem 1.25rem 1rem;max-width:760px;margin:0 auto}
+h1{margin:0;font:700 clamp(1.7rem,6vw,2.5rem)/1.2 "Songti TC","Noto Serif TC",serif;letter-spacing:.02em}
+header p{margin:.4rem 0 0;color:var(--mute)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav div{display:flex;gap:.4rem;overflow-x:auto;max-width:760px;margin:0 auto;padding:.6rem 1.25rem}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
+nav button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--osaka);outline-offset:2px}
+main{max-width:760px;margin:0 auto;padding:1.25rem}
+.dh{border-left:6px solid var(--c);padding-left:1rem;margin-bottom:1rem}
+.dh h2{margin:0;font:700 1.5rem/1.3 "Songti TC","Noto Serif TC",serif}
+.dh p{margin:.2rem 0 0;color:var(--mute);font-size:.92rem}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:.8rem 0 1.2rem}
+.bar i{display:block;height:100%;width:0;background:var(--c);transition:width .25s}
+.warn{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:.7rem .9rem;margin:0 0 1rem;font-size:.92rem}
+ol{list-style:none;margin:0;padding:0}
+.it{display:grid;grid-template-columns:auto 4.6rem 1fr;gap:.2rem .7rem;padding:.85rem 0;border-top:1px solid var(--line)}
+.it input{width:1.2rem;height:1.2rem;margin-top:.3rem;accent-color:var(--c)}
+.tm{color:var(--mute);font-size:.85rem;padding-top:.15rem}
+.nm{font-weight:600}
+.it.done .nm{text-decoration:line-through;color:var(--mute)}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.3rem}
+.chip{font-size:.78rem;padding:.05rem .55rem;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
+.chip.t{border-color:var(--c);color:var(--c)}
+.nt{font-size:.88rem;color:var(--mute);margin:.25rem 0 0}
+.it a{font-size:.85rem;color:var(--osaka)}
+.sum{display:flex;gap:1rem;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin-top:1.2rem}
+.sum b{display:block;font-size:1.15rem}
+.sum span{font-size:.82rem;color:var(--mute)}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;font-size:.92rem}
+th,td{padding:.55rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+h3{font:700 1.15rem/1.4 "Songti TC","Noto Serif TC",serif;margin:1.6rem 0 .6rem}
+.todo label{display:flex;gap:.6rem;padding:.55rem 0;border-top:1px solid var(--line);cursor:pointer}
+.todo input{accent-color:var(--osaka);width:1.1rem;height:1.1rem;margin-top:.3rem}
+.hint{font-size:.85rem;color:var(--mute)}
+</style>
+</head>
+<body>
+<header>
+<h1>京阪神 5 日自由行</h1>
+<p>2026/12/2（三）– 12/6（日）｜京都 2 晚・大阪・神戶｜JX1834 TPE → UKB</p>
+</header>
+<nav><div id="tabs" role="tablist"></div></nav>
+<main id="view"></main>
+<script>
+const K="var(--kyoto)",O="var(--osaka)",B="var(--kobe)";
+const D=[
+{id:"d1",tab:"Day 1",date:"12/2（三）",title:"抵達神戶，前往京都",city:"京都",c:K,stay:"Richmond Hotel Premier 京都四條",
+warn:"13:07 的 JR 班次在入境、領行李後會很趕，建議以 13:22 為主要目標，13:37 為備案。",
+it:[
+{t:"08:20",n:"JX1834 桃園 → 神戶機場",k:"飛行 08:20–11:45｜早餐在機場、午餐在飛機上"},
+{t:"約 12:30",n:"神戶機場快線 → 三宮",tc:340,k:"18 分鐘",u:"https://www.kairport.co.jp/tw/access/portliner",ul:"快線時刻"},
+{t:"13:22",n:"三宮 → 京都（JR 神戶線新快速）",tc:1100,k:"52 分鐘｜13:07 近江塩津行、13:22 野洲行、13:37 長浜行"},
+{t:"約 14:30",n:"京都車站 → 四條（地鐵烏丸線）",tc:220,k:"8 分鐘"},
+{t:"下午",n:"Richmond Hotel Premier 京都四條 check in",k:"地鐵步行 7 分鐘｜先寄放行李也可",q:"Richmond Hotel Premier Kyoto Shijo"},
+{t:"傍晚",n:"逛四條商圈"},
+{t:"晚餐",n:"名代 キムラ すき焼",k:"建議事先訂位",q:"名代 キムラ すき焼 京都"}]},
+{id:"d2",tab:"Day 2",date:"12/3（四）",title:"下鴨神社・金閣寺・嵐山",city:"京都",c:K,stay:"Richmond Hotel Premier 京都四條",
+warn:"嵐山小火車冬季部分日期停駛，請先到官網確認 12/3 是否營運並預約。12 月日落約 16:50，16:02 發車後景色會逐漸變暗。",
+it:[
+{t:"07:00",n:"早餐：京都 いとおかし（烤鮭魚定食）",q:"いとおかし 京都"},
+{t:"07:50",n:"步行祇園四條 → 京阪至出町柳",tc:240,k:"7 分鐘"},
+{t:"上午",n:"下鴨神社",k:"出町柳步行 7 分鐘",q:"下鴨神社"},
+{t:"上午",n:"下鴨神社 → 金閣寺",tc:230,k:"公車約 30 分鐘｜或計程車約 15 分鐘 JPY 1,600–2,200"},
+{t:"中午前",n:"金閣寺",fee:500,q:"金閣寺"},
+{t:"中午",n:"金閣寺 → 嵐山（公車＋嵐電）",tc:480,k:"公車到北野白梅町（230）＋嵐電到嵯峨（250），約 30–40 分鐘"},
+{t:"午餐",n:"嵐山蕎麥麵（よしむら）或 嵐山豆腐料理（松枝）",q:"嵐山 よしむら 蕎麥麵"},
+{t:"下午",n:"嵐山竹林、天龍寺、渡月橋",fee:500,k:"天龍寺 JPY 500",q:"天龍寺"},
+{t:"16:02",n:"嵐山小火車 嵯峨站 → 龜岡站（16:25 抵達）",k:"票價另計，需事先購票",q:"嵯峨野トロッコ嵯峨駅"},
+{t:"傍晚",n:"馬堀站 → 京都車站（JR）",tc:320,k:"26 分鐘"},
+{t:"晚餐",n:"貝だし麺きた田（貝類拉麵）",k:"可能排隊",q:"貝だし麺きた田 京都"},
+{t:"晚上",n:"京都車站夜景：空中徑路、空中花園",k:"空中徑路：搭手扶梯至 10–11 樓，穿過拉麵小路。空中花園：大階梯頂端再搭手扶梯到 RF"}]},
+{id:"d3",tab:"Day 3",date:"12/4（五）",title:"清水寺晨拜，移動大阪",city:"京都 → 大阪",c:O,stay:"DEL style 大阪心齋橋 by 大和Roynet飯店",
+it:[
+{t:"06:00",n:"出門 → 清水寺",tc:230,fee:500,k:"公車約 30 分鐘｜門票 JPY 500",q:"清水寺"},
+{t:"上午",n:"清水寺 → 八阪神社",k:"步行約 16 分鐘",q:"八坂神社"},
+{t:"09:00",n:"回飯店取行李、退房 → 御金神社",k:"飯店步行約 14 分鐘",q:"御金神社"},
+{t:"下午",n:"京都車站 → 大阪",tc:580,k:"28 分鐘"},
+{t:"下午",n:"梅田 → 心齋橋（地鐵御堂筋線）",tc:240,k:"6 分鐘"},
+{t:"下午",n:"DEL style 大阪心齋橋 check in",k:"地鐵步行 4 分鐘",q:"DEL style 大阪心齋橋"},
+{t:"晚上",n:"天王寺：Harukas 300 展望台",fee:2000,q:"Harukas 300"},
+{t:"晚餐",n:"牛角（燒肉）",k:"建議事先訂位"}],note:"早餐、午餐尚未決定。"},
+{id:"d4",tab:"Day 4",date:"12/5（六）",title:"大阪城・梅田・心齋橋",city:"大阪",c:O,stay:"待確認",
+it:[
+{t:"09:00",n:"心齋橋 → 森ノ宮 → 大阪城公園",tc:390,k:"16 分鐘"},
+{t:"上午",n:"大阪城公園（天守閣）",fee:1200,q:"大阪城天守閣"},
+{t:"午餐",n:"大阪燒"},
+{t:"下午",n:"梅田（選配）",k:"可選：Grand Front、HEP FIVE 摩天輪、梅田藍天大廈",q:"梅田"},
+{t:"晚上",n:"逛心齋橋、道頓堀",q:"道頓堀"},
+{t:"晚餐",n:"串燒（炸串）"}]},
+{id:"d5",tab:"Day 5",date:"12/6（日）",title:"神戶三田 Outlet・神戶牛排",city:"神戶",c:B,stay:"待確認",
+warn:"回程航班與住宿尚未填寫，請到「總覽」確認。",
+it:[
+{t:"上午",n:"大阪 → Kobe-Sanda Premium Outlets（巴士）",tc:890,k:"新大阪站約 70 分鐘、大阪站約 50 分鐘",u:"https://www.premiumoutlets.co.jp/en/kobesanda/access/bus_schedule_root3.html",ul:"巴士時刻"},
+{t:"下午",n:"逛 Outlet",q:"Kobe Sanda Premium Outlets"},
+{t:"傍晚",n:"Outlet → 三宮（巴士）",tc:700,k:"約 50 分鐘",u:"https://www.premiumoutlets.co.jp/en/kobesanda/access/bus_schedule_root2.html",ul:"巴士時刻"},
+{t:"晚餐",n:"神戶牛排",k:"建議事先訂位",q:"神戶牛排 三宮"}]}
+];
+const TODO=["12/6 回程航班與出發機場","12/5、12/6 住宿與退房日期","12/3 嵐山小火車營運狀況並購票","訂位：名代キムラ、牛角、神戶牛排","準備 ICOCA 或其他交通 IC 卡"];
+const $=s=>document.querySelector(s),yen=n=>"JPY "+n.toLocaleString();
+let S={};try{S=JSON.parse(localStorage.getItem("kk-trip")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("kk-trip",JSON.stringify(S))}catch(e){}};
+const sum=(d,f)=>d.it.reduce((a,x)=>a+(x[f]||0),0);
+function el(t,a,h){const e=document.createElement(t);Object.assign(e,a||{});if(h!=null)e.textContent=h;return e}
+function day(d){
+ const m=el("div");m.style.setProperty("--c",d.c);
+ const h=el("div",{className:"dh"});h.append(el("h2",0,d.date+" "+d.title),el("p",0,d.city+"｜住宿："+d.stay));m.append(h);
+ const bar=el("div",{className:"bar"});const fill=el("i");bar.append(fill);m.append(bar);
+ if(d.warn)m.append(el("p",{className:"warn"},"⚠ "+d.warn));
+ const ol=el("ol");
+ const upd=()=>{const n=d.it.filter((_,i)=>S[d.id+i]).length;fill.style.width=n/d.it.length*100+"%"};
+ d.it.forEach((x,i)=>{
+  const id=d.id+i,li=el("li",{className:"it"+(S[id]?" done":"")});
+  const cb=el("input",{type:"checkbox",checked:!!S[id],ariaLabel:"完成："+x.n});
+  cb.onchange=()=>{S[id]=cb.checked;if(!cb.checked)delete S[id];li.classList.toggle("done",cb.checked);save();upd()};
+  const body=el("div");body.append(el("div",{className:"nm"},x.n));
+  const meta=el("div",{className:"meta"});
+  if(x.tc)meta.append(el("span",{className:"chip t"},"交通 "+yen(x.tc)));
+  if(x.fee)meta.append(el("span",{className:"chip t"},"門票 "+yen(x.fee)));
+  if(meta.children.length)body.append(meta);
+  if(x.k)body.append(el("p",{className:"nt"},x.k));
+  const links=el("p",{className:"nt"});
+  if(x.q)links.append(el("a",{href:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(x.q),target:"_blank",rel:"noopener"},"在地圖開啟"));
+  if(x.u){if(x.q)links.append(" ｜ ");links.append(el("a",{href:x.u,target:"_blank",rel:"noopener"},x.ul))}
+  if(links.childNodes.length)body.append(links);
+  li.append(cb,el("div",{className:"tm"},x.t),body);ol.append(li)});
+ m.append(ol);upd();
+ if(d.note)m.append(el("p",{className:"hint"},d.note));
+ const s=el("div",{className:"sum"});
+ [["交通",sum(d,"tc")],["門票",sum(d,"fee")]].forEach(([l,v])=>{const w=el("div");w.append(el("b",0,yen(v)),el("span",0,l));s.append(w)});
+ m.append(s);return m}
+function overview(){
+ const m=el("div");m.append(el("h3",0,"費用概估（已列項目）"));
+ const t=el("table");t.innerHTML="<tr><th>日期</th><th class=r>交通</th><th class=r>門票</th></tr>";
+ let a=0,b=0;D.forEach(d=>{const x=sum(d,"tc"),y=sum(d,"fee");a+=x;b+=y;const r=t.insertRow();r.insertCell().textContent=d.tab;[x,y].forEach(v=>{const c=r.insertCell();c.className="r";c.textContent=yen(v)})});
+ const r=t.insertRow();r.insertCell().textContent="合計";[a,b].forEach(v=>{const c=r.insertCell();c.className="r";c.textContent=yen(v)});
+ r.style.fontWeight=700;m.append(t);
+ m.append(el("p",{className:"hint"},"合計約 "+yen(a+b)+"。未計入：嵐山小火車票價、Day 4 往返梅田、Day 5 回程、餐費、住宿。"));
+ m.append(el("h3",0,"待確認事項"));
+ const w=el("div",{className:"todo"});
+ TODO.forEach((x,i)=>{const id="t"+i,l=el("label"),c=el("input",{type:"checkbox",checked:!!S[id]});
+  c.onchange=()=>{S[id]=c.checked;if(!c.checked)delete S[id];save()};l.append(c,el("span",0,x));w.append(l)});
+ m.append(w);
+ m.append(el("p",{className:"hint"},"勾選狀態只會存在這台裝置的瀏覽器。"));return m}
+const tabs=D.map(d=>[d.id,d.tab]).concat([["all","總覽"]]);
+function show(id){
+ if(!tabs.some(t=>t[0]===id))id="d1";
+ [...$("#tabs").children].forEach(b=>b.setAttribute("aria-selected",b.dataset.id===id));
+ const v=$("#view");v.replaceChildren(id==="all"?overview():day(D.find(d=>d.id===id)));
+ if(location.hash!=="#"+id)history.replaceState(null,"","#"+id)}
+tabs.forEach(([id,l])=>{const b=el("button",{type:"button"},l);b.dataset.id=id;b.setAttribute("role","tab");b.onclick=()=>show(id);$("#tabs").append(b)});
+addEventListener("hashchange",()=>show(location.hash.slice(1)));
+show(location.hash.slice(1)||"d1");
+</script>
+</body>
+</html>
